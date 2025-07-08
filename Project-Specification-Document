@@ -1,0 +1,23 @@
+# Tip Calculator – Project Specification
+
+## 1. Goal
+Create a web-based tip calculator where users enter:
+- Bill amount
+- Tip percentage
+
+The backend calculates and returns:
+- Tip amount
+- Total amount
+
+## 2. Users
+Public web app – no login.
+
+## 3. Tech Stack
+- Backend: Java + Spring Boot (REST API)
+- Frontend: HTML/CSS + Vanilla JS (calls API)
+- Hosting: Local or on Render
+
+## 4. Features
+- Input form
+- Call backend `/calculate-tip`
+- Show results dynamically
