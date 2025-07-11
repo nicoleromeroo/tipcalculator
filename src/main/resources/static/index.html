@@ -12,33 +12,46 @@
         <div class="header">
             <h1>Tip Calculator</h1>
             <div class="container">
-            <p>Calculate your tip easily!</p>
-            <p>Enter the bill amount and the tip percentage to get the total tip amount.</p>
             <div class="calculator-box">
-                <div class="input-row">
-                    <label for="billAmount">Bill Amount:</label>
-                    <input type="number" id="billAmount" placeholder="Enter bill amount" required>
-                    <span class="currency-symbol">€</span>
+                <div class="amount-group">
+                    <label for="billAmount">Bill</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol">€</span>
+                        <input type="number" id="billAmount" placeholder="0.00" required>
+                    </div>
+                </div>
+                <div class="amount-group">
+                    <label for="TipAmount">Select Tip</label>
+                </div>
+
+            <div class="tip-buttons">
+
+                <button class="tip-btn" data-percent="5">5%</button>
+                <button class="tip-btn" data-percent="10">10%</button>
+                <button class="tip-btn" data-percent="15">15%</button>
+                <button class="tip-btn" data-percent="25">25%</button>
+                <button class="tip-btn" data-percent="50">50%</button>
+                <button class="tip-btn custom-btn" id="customBtn">Custom</button>
+                <input type="number" id="customInput" placeholder="%" style="display: none;" />
             </div>
-            <div class="buttons">
-                <button class="tip-btn" data-percent="5">5 %</button>
-                <button class="tip-btn" data-percent="10">10 %</button>
-                <button class="tip-btn" data-percent="15">15 %</button>
-                <input class="number"  id="custom-tip" placeholder="___ %"/>
+
+
+            <div class="result-box">
+                <div class="result-line">
+                    <div class="label">
+                    <strong>Tip Amount</strong><br>
+                    </div>
+                    <div class="value">€ <span id="tipAmount">0.00</span></div>
+                </div>
+                <div class="result-line">
+                    <div class="label">
+                    <strong>Total</strong><br>
+                    </div>
+                    <div class="value">€ <span id="totalAmount">0.00</span></div>
+                </div>
+                <button class="reset-btn">RESET</button>
             </div>
-            <div class="action-btns">
-                <button class="reset-btn">Reset</button>
-            </div>  
-            <div class="result-row">
-                <label for="tipAmount">Tip Amount:</label>
-                <span id="tipAmount">0.00</span>
-                <span class="currency-symbol">€</span>
-            </div>
-            <div class="result-row">
-                <label for="totalAmount">Total Amount:</label>
-                <span id="totalAmount">0.00</span>
-                <span class="currency-symbol">€</span>
-            </div>
+
                       
         </div>
     </body>
