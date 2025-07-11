@@ -117,17 +117,6 @@ p {
     background-color: #006d6d;
 }
 
-#customInput {
-    padding: 14px;
-    font-size: 18px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    text-align: right;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: monospace;
-}
-
 .currency-symbol {
     margin-left: 10px;
     color: #555;
@@ -163,23 +152,15 @@ p {
 }
 
 .tip-btn.active {
-    background-color: #746aaa;
-    color: #003333;
+    background-color: #26c2ae;
+    color: #00474b;
+    font-weight: 700;
 }
+
 
 .tip-btn.custom {
     background-color: #f3f7f9;
     color: #5e548e;
-}
-
-.custom-input {
-    display: none;
-    padding: 14px;
-    font-size: 18px;
-    border-radius: 12px;
-    border: 2px solid #ccc;
-    text-align: center;
-    grid-column: span 2;
 }
 
 .result-box {
@@ -230,3 +211,40 @@ p {
 .reset-btn:hover {
   background-color: #2be0cb;
 }
+
+.custom-tip-container {
+    background-color: #5e548e;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.custom-tip-container input.custom-input {
+  display: block;
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px solid #26c2ae;
+  background-color: #f3f7f9;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00474B;
+  text-align: right;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+.custom-input.active {
+  border: 2px solid #26c2ae;
+  background-color: #f3f7f9;
+  color: #00474B;
+}
+
+#customBtn {
+  grid-column: span 2;
+}
+
