@@ -20,6 +20,15 @@
                     <input type="number" id="billAmount" placeholder="Enter bill amount" required>
                     <span class="currency-symbol">€</span>
             </div>
+            <div class="buttons">
+                <button class="tip-btn" data-percent="5">5 %</button>
+                <button class="tip-btn" data-percent="10">10 %</button>
+                <button class="tip-btn" data-percent="15">15 %</button>
+                <input class="number"  id="custom-tip" placeholder="___ %"/>
+            </div>
+            <div class="action-btns">
+                <button class="reset-btn">Reset</button>
+            </div>  
             <div class="result-row">
                 <label for="tipAmount">Tip Amount:</label>
                 <span id="tipAmount">0.00</span>
@@ -30,16 +39,7 @@
                 <span id="totalAmount">0.00</span>
                 <span class="currency-symbol">€</span>
             </div>
-            <div class="buttons">
-                <button class="tip-btn" data-percent="5">5 %</button>
-                <button class="tip-btn" data-percent="10">10 %</button>
-                <button class="tip-btn" data-percent="15">15 %</button>
-                <input class="number"  id="custom-tip" placeholder="___ %"/>
-            </div>
-            <div class="action-btns">
-                <button class="reset-btn">Reset</button>
-                <button class="calculate-btn">Calculate</button>
-            </div>            
+                      
         </div>
     </body>
 </html>
