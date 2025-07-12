@@ -1,6 +1,3 @@
-Of course — here is your **optimized and professional `README.md`** version, with clean structure, no emojis, and a formal tone suitable for an IT portfolio or job application:
-
----
 
 ```md
 # Tip Calculator
@@ -101,6 +98,8 @@ To run this project locally, you will need:
 ### Desktop View
 
 ![Desktop Screenshot](./screenshots/tipcalc1.png)
+![Desktop Screenshot](./screenshots/tipcalc13.png)
+![Desktop Screenshot](./screenshots/tipcalc100.png)
 
 ---
 
