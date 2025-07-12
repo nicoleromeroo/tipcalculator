@@ -85,7 +85,7 @@ To run this project locally, you will need:
    ```
    http://localhost:8080
    ```
-
+```
 ---
 
 ## Screenshots
