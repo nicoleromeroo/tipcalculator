@@ -3,18 +3,19 @@ body {
     font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: start; 
+    padding: 10px;
     margin: 0;
 }
 
+
 .container {
     background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 400px;
-    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    width: 90%;
     text-align: center;
 }
 
@@ -22,7 +23,7 @@ h1 {
     font-weight: bold;
     margin-bottom: 8px;
     font-family: monospace;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     justify-content: center;
 }
@@ -56,7 +57,7 @@ p {
 }
 
 .amount-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: left;
 }
 
@@ -221,9 +222,10 @@ p {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s ease-in-out;
+    grid-column: span 1;
 }
 
-.custom-tip-container input.custom-input {
+.custom-input {
   display: block;
   padding: 16px;
   border-radius: 12px;
@@ -248,3 +250,36 @@ p {
   grid-column: span 2;
 }
 
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .amount-group label,
+    .tip-btn,
+    .custom-input,
+    .reset-btn {
+        font-size: 16px;
+    }
+
+    .tip-buttons {
+        gap: 10px;
+    }
+
+    .tip-btn {
+        padding: 12px;
+    }
+
+    .result-box {
+        padding: 15px;
+    }
+
+    .value {
+        font-size: 20px;
+    }
+
+    .reset-btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+}

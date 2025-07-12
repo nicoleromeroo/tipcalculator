@@ -1,24 +1,54 @@
 const billInput = document.getElementById('billAmount');
-const tipButtons = document.querySelectorAll('.tip-btn');
 const tipAmountOutput = document.getElementById('tipAmount');
 const totalAmountOutput = document.getElementById('totalAmount');
 const resetBtn = document.querySelector('.reset-btn');
-const customBtn = document.getElementById('customBtn');
-const customContainer = customBtn.parentElement;
+const customContainer = document.querySelector('.custom-tip-container');
 
 let selectedTip = null;
 let customInput = null;
 
-// Function to clear active classes
+// Create and show the custom button initially
+function createCustomButton() {
+  const button = document.createElement('button');
+  button.textContent = 'Custom';
+  button.classList.add('tip-btn');
+  button.id = 'customBtn';
+  customContainer.innerHTML = '';
+  customContainer.appendChild(button);
+
+  button.addEventListener('click', () => {
+    showCustomInput();
+  });
+}
+
+// Show the input field and remove the button
+function showCustomInput() {
+  customContainer.innerHTML = '';
+  customInput = document.createElement('input');
+  customInput.type = 'number';
+  customInput.placeholder = '%';
+  customInput.classList.add('custom-input');
+  customContainer.appendChild(customInput);
+  customInput.focus();
+
+  customInput.addEventListener('input', () => {
+    selectedTip = customInput.value;
+    calculate();
+  });
+}
+
+// Remove active states and handle custom reset
 function clearActiveStates() {
-  tipButtons.forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tip-btn').forEach(btn => btn.classList.remove('active'));
+
+  // If custom input exists, replace it with the button again
   if (customInput) {
-    customInput.remove();
     customInput = null;
+    createCustomButton();
   }
 }
 
-// Function to calculate tip and total
+// Perform calculation
 function calculate() {
   const bill = parseFloat(billInput.value);
   const tipPercent = parseFloat(selectedTip);
@@ -36,8 +66,8 @@ function calculate() {
   totalAmountOutput.textContent = total.toFixed(2);
 }
 
-// Tip button clicks (excluding custom)
-tipButtons.forEach(btn => {
+// Handle percentage button clicks
+document.querySelectorAll('.tip-btn').forEach(btn => {
   if (btn.id !== 'customBtn') {
     btn.addEventListener('click', () => {
       clearActiveStates();
@@ -48,31 +78,10 @@ tipButtons.forEach(btn => {
   }
 });
 
-// Custom button logic
-customBtn.addEventListener('click', () => {
-  clearActiveStates(); // deactivate others
-  customBtn.classList.add('active');
-
-  // Create new input
-  customInput = document.createElement('input');
-  customInput.type = 'number';
-  customInput.placeholder = '%';
-  customInput.classList.add('custom-input', 'active');
-  customInput.value = '';
-  customBtn.parentElement.appendChild(customInput);
-  customInput.focus();
-
-  // Handle custom input changes
-  customInput.addEventListener('input', () => {
-    selectedTip = customInput.value;
-    calculate();
-  });
-});
-
-// Recalculate when bill amount changes
+// Bill input calculation
 billInput.addEventListener('input', calculate);
 
-// Reset everything
+// Reset button logic
 resetBtn.addEventListener('click', () => {
   billInput.value = '';
   selectedTip = null;
@@ -80,3 +89,6 @@ resetBtn.addEventListener('click', () => {
   tipAmountOutput.textContent = '0.00';
   totalAmountOutput.textContent = '0.00';
 });
+
+// Initial setup
+createCustomButton();
