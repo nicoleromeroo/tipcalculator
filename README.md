@@ -96,9 +96,9 @@ To run this project locally, you will need:
 
 ### Desktop View
 
-![Desktop Screenshot](./screenshots/tipcalc1.png)
-![Desktop Screenshot](./screenshots/tipcalc13.png)
-![Desktop Screenshot](./screenshots/tipcalc100.png)
+![Desktop Screenshot](.target/screenshots/tipcalc1.png)
+![Desktop Screenshot](.target/screenshots/tipcalc13.png)
+![Desktop Screenshot](.target/screenshots/tipcalc100.png)
 
 ---
 
