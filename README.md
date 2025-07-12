@@ -82,10 +82,10 @@ To run this project locally, you will need:
 
 4. Open the application in your browser:
 
-   ```
+   ```bash
    http://localhost:8080
    ```
-```
+````
 ---
 
 ## Screenshots
@@ -121,7 +121,7 @@ The application can be deployed locally or containerized using Docker.
    ```
 
 Then open your browser at `http://localhost:8080`.
-
+````
 ---
 
 ## License
