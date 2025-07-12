@@ -1,5 +1,4 @@
 
-```md
 # Tip Calculator
 
 This is a full-stack Tip Calculator application developed using **Spring Boot (Java)** and **Vanilla JavaScript**.  
@@ -128,6 +127,4 @@ Then open your browser at `http://localhost:8080`.
 ## License
 
 This project is released as open source under the MIT License.
-
-```
 
